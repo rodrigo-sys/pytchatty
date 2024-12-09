@@ -1,5 +1,10 @@
 #!/bin/python
 
+# import pytchat
+# def main():
+#     # print(pytchat.__version__)
+#     print(pytchat)
+# main()
 import sys
 import pytchat
 import shutil
@@ -50,4 +55,8 @@ def printChat():
             print('-' * terminal_size.columns)
             # print('- ' * (terminal_size.columns // 2))
 
-printChat()
+def main():
+    printChat()
+
+if __name__ == "__main__":
+    main()
