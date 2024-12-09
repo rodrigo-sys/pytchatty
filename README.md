@@ -1,6 +1,6 @@
 # pytchatty
 
-just a chat implementation of pytchat library
+just a chat implementation of [pytchat](https://github.com/taizan-hokuto/pytchat) library
 
 # Install
 ```sh
