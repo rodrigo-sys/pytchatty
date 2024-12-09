@@ -1,4 +1,4 @@
-# pytchat
+# pytchatty
 
 just a chat implementation of pytchat library
 
