@@ -1,10 +1,5 @@
 #!/bin/python
 
-# import pytchat
-# def main():
-#     # print(pytchat.__version__)
-#     print(pytchat)
-# main()
 import sys
 import pytchat
 import shutil
