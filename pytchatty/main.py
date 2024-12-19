@@ -37,7 +37,10 @@ def printChat():
     # chat = pytchat.create(video_id=video_id, seektime=2800)
     while chat.is_alive():
         for c in chat.get().sync_items():
-            signal.signal(signal.SIGWINCH, updateTerminalSize)
+            try:
+                signal.signal(signal.SIGWINCH, updateTerminalSize)
+            except AttributeError:
+                pass
 
             print(f"{assignColor(c.author.name) + '『' + c.author.name + '』'}")
             # print(f"{assignColor(c.author.name) + '[' + c.author.name + ']'}")
