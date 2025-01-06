@@ -1,12 +1,23 @@
 #!/bin/python
 
+import os
 import sys
 import pytchat
 import shutil
 import random
 import signal
+import subprocess
 from colorama import Fore, init
 # from colorama import Fore, Style, init
+
+if not sys.stdin.isatty():
+    # open the script in a new terminal window if it was spawned outside a tty
+    try:
+        command = [os.environ['TERMINAL']] + sys.argv
+        subprocess.check_call(command)
+        sys.exit()
+    except subprocess.CalledProcessError as e:
+        pass
 
 init(autoreset=True)
 terminal_size = shutil.get_terminal_size()
